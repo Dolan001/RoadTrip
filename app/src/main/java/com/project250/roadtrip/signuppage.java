@@ -64,7 +64,7 @@ public class signuppage extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<AuthResult> task) {
                                                 if(task.isSuccessful())
                                                 {
-                                                    Toast.makeText(getApplicationContext(),"username saved",Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getApplicationContext(),"All information saved",Toast.LENGTH_SHORT).show();
                                                     Intent signin = new Intent(signuppage.this, Signinpage.class);
                                                     startActivity(signin);
                                                 }else{
