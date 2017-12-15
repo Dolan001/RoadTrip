@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class Customer_edit_profile extends Fragment {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Customer_edit_profile extends Fragment {
+    FirebaseAuth auth;
 
     View view;
     Button logout,edit_pro;
@@ -25,6 +27,8 @@ public class Customer_edit_profile extends Fragment {
         edit_pro = (Button)view.findViewById(R.id.edit_pro);
         edit_pro_button();
 
+        auth = FirebaseAuth.getInstance();
+
         return view;
     }
 
@@ -32,7 +36,9 @@ public class Customer_edit_profile extends Fragment {
         logout.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
+                        auth.signOut();
                         Intent logout_page = new Intent(getActivity(),Signinpage.class);
+                        logout_page.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(logout_page);
                     }
                 }

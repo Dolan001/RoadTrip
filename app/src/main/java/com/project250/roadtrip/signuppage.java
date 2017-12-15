@@ -14,6 +14,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class signuppage extends AppCompatActivity {
     FirebaseAuth auth;
@@ -23,6 +30,7 @@ public class signuppage extends AppCompatActivity {
     String userpassword;
     String usermobile_no;
     String useraddress;
+    //ArrayList<String> addresses;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +46,25 @@ public class signuppage extends AppCompatActivity {
         final TextView address = (TextView)findViewById(R.id.address);
         TextView existsacc = (TextView)findViewById(R.id.existsacc);
 
+
+//        FirebaseDatabase db = FirebaseDatabase.getInstance();
+//        DatabaseReference databaseReference = db.getReference();
+//        DatabaseReference customers = databaseReference.child("Customer");
+//        addresses = new ArrayList<String>();
+//        customers.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                for(DataSnapshot child: dataSnapshot.getChildren()) {
+//                    String address = child.child("Address").getValue(String.class);
+//                    addresses.add(address);
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
         signup.setOnClickListener(
                 new Button.OnClickListener(){
