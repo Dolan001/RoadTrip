@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">RoadTrip</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="online_help_text">Online Help</string>
+    <string name="email_or_mobile_no_text">Email or Mobile No.</string>
+    <string name="sign_in_text1">Sign In</string>
+    <string name="create_a_new_account_text">Create a new account</string>
+    <string name="forgot_password_text">Forgot password?</string>
+    <string name="fullname_text">Fullname</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="mobile_no_text">Mobile No.</string>
+    <string name="national_id_text">National ID</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="sign_up_text_form">Sign Up</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="booked_cars_text">Booked cars</string>
+    <string name="cars_text">Cars</string>
+    <string name="home_text">Home</string>
+    <string name="title_activity_customer_home">Customer_home</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Cars</string>
+    <string name="tab_text_3">Booked Cars</string>
+    <string name="title_activity_admin__home">Admin_Home</string>
+    <string name="tab_4_text">Edit Profile</string>
+    <string name="road_trip_text">Road Trip</string>
+    <string name="road_trip_title_text">Road Trip</string>
+    <string name="edit_profile_text1">Edit Profile</string>
+    <string name="dolan_bairsgi_text">  <u>Dolan Bairagi</u></string>
+    <string name="booked_cars_text1">Booked cars</string>
+
+    <string-array name="names">
+        <item>Customer</item>
+        <item>Admin</item>
+        <item>Driver</item>
+    </string-array>
+</resources>

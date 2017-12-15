@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "946708809731",
+    "firebase_url": "https://roadtrip-3f2fe.firebaseio.com",
+    "project_id": "roadtrip-3f2fe",
+    "storage_bucket": "roadtrip-3f2fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946708809731:android:668831f59d824318",
+        "android_client_info": {
+          "package_name": "com.project250.roadtrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946708809731-9fsplvalfs5nbtjqqglrstorl2bq3vj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project250.roadtrip",
+            "certificate_hash": "f670f8153647b03f15d9797488f7410213f666c7"
+          }
+        },
+        {
+          "client_id": "946708809731-i7aln12h96es73jbi7e0hsk03nsubaop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRBdbaPb2RxbKYXAihbXSEAEwcTtAZHLM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946708809731-i7aln12h96es73jbi7e0hsk03nsubaop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
