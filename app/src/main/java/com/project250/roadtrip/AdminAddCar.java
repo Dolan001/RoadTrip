@@ -1,31 +1,25 @@
 package com.project250.roadtrip;
 
-
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
+public class AdminAddCar extends AppCompatActivity {
 
-public class AdminAddCarsFragment extends AppCompatActivity {
-
-    View view;
-    Button addcar;
+    Button add_car_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_adminaddcars);
+        setContentView(R.layout.activity_admin_add_car);
 
-        addcar = (Button) view.findViewById(R.id.add_car);
-        addcar.setOnClickListener(
+        add_car_button = (Button) findViewById(R.id.add_car_button);
+        add_car_button.setOnClickListener(
                 new Button.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent add = new Intent(AdminAddCarsFragment.this,Admin_Home.class);
+                        Intent add = new Intent(AdminAddCar.this,Admin_Home.class);
                         startActivity(add);
                     }
                 }

@@ -13,13 +13,24 @@ public class AdminCarDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_car_details);
 
-        Button button3 = (Button)findViewById(R.id.button3);
+        Button editCarbutton = (Button)findViewById(R.id.editcarbutton);
+        Button add_car_button = (Button)findViewById(R.id.addCarbutton);
 
-        button3.setOnClickListener(
+
+
+        editCarbutton.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
                         Intent edit = new Intent(AdminCarDetails.this, EditCar.class);
                         startActivity(edit);
+                    }
+                }
+        );
+        add_car_button.setOnClickListener(
+                new Button.OnClickListener(){
+                    public void onClick(View v){
+                        Intent add_car = new Intent(AdminCarDetails.this, AdminAddCar.class);
+                        startActivity(add_car);
                     }
                 }
         );

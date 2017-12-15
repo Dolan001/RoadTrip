@@ -139,9 +139,6 @@ public class Admin_Home extends AppCompatActivity {
                case 2:
                    AdminbookedcarsFragment tab3 = new AdminbookedcarsFragment();
                    return tab3;
-               case 3:
-                   AdminAddCarsFragment tab4 = new AdminAddCarsFragment();
-                   return tab4;
            }
            return null;
         }
@@ -149,7 +146,7 @@ public class Admin_Home extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 4;
+            return 3;
         }
     }
 }

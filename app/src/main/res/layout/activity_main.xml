@@ -71,11 +71,14 @@
             android:id="@+id/imageView5"
             android:layout_width="0dp"
             android:layout_height="167dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:cropToPadding="false"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/car_logo" />
+            app:srcCompat="@drawable/car_logo_final" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline6"

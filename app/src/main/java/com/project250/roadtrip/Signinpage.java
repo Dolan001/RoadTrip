@@ -48,7 +48,7 @@ public class Signinpage extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(getApplicationContext(),"Successfully sign in",Toast.LENGTH_SHORT).show();
-                                        Intent home = new Intent(Signinpage.this,Customer_home.class);
+                                        Intent home = new Intent(Signinpage.this,Admin_Home.class);
                                         startActivity(home);
                                     }else{
                                         Toast.makeText(getApplicationContext(),"Enter Correct information",Toast.LENGTH_SHORT).show();
@@ -57,7 +57,6 @@ public class Signinpage extends AppCompatActivity {
                                     }
                                 }
                             });
-
                         }
                     }
                     public boolean validate(){
