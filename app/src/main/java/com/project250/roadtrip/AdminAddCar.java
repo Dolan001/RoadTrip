@@ -64,13 +64,15 @@ public class AdminAddCar extends AppCompatActivity {
         String info7 = seats.getText().toString().trim();
         String info8 = priceperday.getText().toString().trim();
         String info9 = carlocation.getText().toString().trim();
+        String info10 = "Available";
+        String info11 = "Now";
 
         if(!TextUtils.isEmpty(car_name) || !TextUtils.isEmpty(info1) || !TextUtils.isEmpty(info2) || !TextUtils.isEmpty(info3) || !TextUtils.isEmpty(info4) || !TextUtils.isEmpty(info5) || !TextUtils.isEmpty(info6) || !TextUtils.isEmpty(info7) || !TextUtils.isEmpty(info8) || !TextUtils.isEmpty(info9)){
 
 //            String id = databaseReference.push().getKey();
 //            Car car = new Car(info1,info2,info3,info4,info5,info6,info7,info8,info9);
 //            databaseReference.child(id).setValue(car);
-            Firebase car_info1 = rootfb.child("Car Name");
+            Firebase car_info1 = rootfb.child("Car_Name");
             car_info1.setValue(car_name);
             Firebase car_info2 = rootfb.child("Info-1");
             car_info2.setValue(info1);
@@ -86,10 +88,14 @@ public class AdminAddCar extends AppCompatActivity {
             car_info7.setValue(info6);
             Firebase car_info8 = rootfb.child("Seats");
             car_info8.setValue(info7);
-            Firebase car_info9 = rootfb.child("Price per day");
+            Firebase car_info9 = rootfb.child("Price_per_day");
             car_info9.setValue(info8);
-            Firebase car_info10 = rootfb.child("Car location");
+            Firebase car_info10 = rootfb.child("Car_location");
             car_info10.setValue(info9);
+            Firebase car_info11 = rootfb.child("Available_date");
+            car_info11.setValue(info10);
+            Firebase car_info12 = rootfb.child("Available_time");
+            car_info12.setValue(info11);
             Toast.makeText(this,"Successfully inserted data", Toast.LENGTH_SHORT).show();
             Intent add = new Intent(AdminAddCar.this,Admin_Home.class);
             startActivity(add);
