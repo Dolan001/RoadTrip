@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/carname"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginBottom="4dp"
@@ -51,7 +51,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline62" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/firstinfo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -73,7 +73,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/secondinfo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -93,7 +93,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline65" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/thirdinfo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -113,7 +113,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline66" />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/forthinfo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -130,10 +130,10 @@
                 app:layout_constraintBottom_toTopOf="@+id/guideline68"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText6" />
+                app:layout_constraintTop_toTopOf="@+id/guideline67" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/fifthinfo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -233,7 +233,7 @@
                 android:textColor="#ffffff"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline74"
-                app:layout_constraintEnd_toStartOf="@+id/editText11"
+                app:layout_constraintEnd_toStartOf="@+id/guideline64"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline71" />
 
@@ -255,7 +255,7 @@
                 app:layout_constraintVertical_bias="1.0" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/passengerno"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -271,7 +271,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline73" />
 
             <EditText
-                android:id="@+id/editText11"
+                android:id="@+id/seats"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -287,7 +287,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline71" />
 
             <EditText
-                android:id="@+id/editText12"
+                android:id="@+id/priceperday"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
@@ -318,7 +318,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline75" />
 
             <EditText
-                android:id="@+id/editText13"
+                android:id="@+id/carlocation"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="8dp"
