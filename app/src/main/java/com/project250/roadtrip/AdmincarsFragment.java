@@ -8,41 +8,72 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 public class AdmincarsFragment extends Fragment {
 
-    View view;
+    View v;
+    ArrayList<Car> cars;
+    ListView listView;
+    CarAdapter adapter;
+    ImageView imageView;
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference database;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_admincars, container, false);
+        v = inflater.inflate(R.layout.fragment_admincars, container, false);
 
-        ConstraintLayout car1 = (ConstraintLayout) view.findViewById(R.id.constraintLayout1);
-        ConstraintLayout car2 = (ConstraintLayout) view.findViewById(R.id.constraintLayout2);
 
-        car1.setOnClickListener(
-                new ConstraintLayout.OnClickListener(){
-                    public void onClick(View v){
-                        Intent details = new Intent(getActivity(),AdminCarDetails.class);
-                        startActivity(details);
-                    }
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        database = mFirebaseDatabase.getReference().child("Cars");
+        listView = (ListView)v.findViewById(R.id.listview);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                cars = new ArrayList<Car>();
+                for(DataSnapshot x: dataSnapshot.getChildren()) {
+                    Car car = x.getValue(Car.class);
+                    cars.add(car);
                 }
-        );
 
-        car2.setOnClickListener(
-                new ConstraintLayout.OnClickListener(){
-                    public void onClick(View v){
-                        Intent details = new Intent(getActivity(),AdminCarDetails.class);
-                        startActivity(details);
-                    }
-                }
-        );
+                adapter = new CarAdapter(cars, getActivity());
+                listView.setAdapter(adapter);
+                listView.setOnItemClickListener(
+                        new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getActivity(),AdminCarDetails.class);
+                                startActivity(i);
+                            }
+                        }
+                );
 
-        return view;
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        return v;
 
     }
 
