@@ -3,7 +3,6 @@ package com.project250.roadtrip;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +10,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import android.support.v4.app.ListFragment;
 
 import java.util.ArrayList;
 
@@ -55,17 +53,15 @@ public class AdmincarsFragment extends Fragment {
 
                 adapter = new CarAdapter(cars, getActivity());
                 listView.setAdapter(adapter);
+
                 listView.setOnItemClickListener(
                         new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(getActivity(),AdminCarDetails.class);
-                                startActivity(i);
+                                Toast.makeText(getContext(),"Clicked",Toast.LENGTH_SHORT).show();
                             }
                         }
                 );
-
             }
 
             @Override
