@@ -47,12 +47,12 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/carname"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/honda_accord" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/carname"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -75,11 +75,11 @@
                     android:textColor="#d50000"
                     android:textSize="25dp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintStart_toStartOf="@+id/carname"
                     app:layout_constraintTop_toTopOf="@+id/guideline0" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/info1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -91,48 +91,48 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/info2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Air Conditioning"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView21"
-                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+                    app:layout_constraintStart_toStartOf="@+id/info1"
+                    app:layout_constraintTop_toBottomOf="@+id/info1" />
 
                 <TextView
-                    android:id="@+id/textView23"
+                    android:id="@+id/info3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Central Locking"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView22"
-                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                    app:layout_constraintStart_toStartOf="@+id/info2"
+                    app:layout_constraintTop_toBottomOf="@+id/info2" />
 
                 <TextView
-                    android:id="@+id/textView24"
+                    android:id="@+id/info4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Electric Window"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView23"
-                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
+                    app:layout_constraintStart_toStartOf="@+id/info3"
+                    app:layout_constraintTop_toBottomOf="@+id/info3" />
 
                 <TextView
-                    android:id="@+id/textView25"
+                    android:id="@+id/info5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Air Bags"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView24"
-                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+                    app:layout_constraintStart_toStartOf="@+id/info4"
+                    app:layout_constraintTop_toBottomOf="@+id/info4" />
 
                 <TextView
                     android:id="@+id/textView26"
@@ -144,11 +144,11 @@
                     android:textSize="25dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/guideline18"
-                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="@+id/info5"
                     app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/passenger"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="#40ffffff"
@@ -175,7 +175,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
                 <TextView
-                    android:id="@+id/textView32"
+                    android:id="@+id/seats"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="#40ffffff"
@@ -257,8 +257,8 @@
                     android:text="Audio System"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView25"
-                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                    app:layout_constraintStart_toStartOf="@+id/info5"
+                    app:layout_constraintTop_toBottomOf="@+id/info5" />
 
                 <Button
                     android:id="@+id/editcarbutton"

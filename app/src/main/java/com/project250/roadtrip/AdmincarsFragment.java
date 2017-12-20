@@ -4,6 +4,7 @@ package com.project250.roadtrip;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ public class AdmincarsFragment extends Fragment {
 
     View v;
     ArrayList<Car> cars;
-    ListView listView;
+    RecyclerView recyclerView;
     CarAdapter adapter;
     ImageView imageView;
     FirebaseDatabase mFirebaseDatabase;
@@ -40,28 +41,17 @@ public class AdmincarsFragment extends Fragment {
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         database = mFirebaseDatabase.getReference().child("Cars");
-        listView = (ListView)v.findViewById(R.id.listview);
+        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 cars = new ArrayList<Car>();
-                for(DataSnapshot x: dataSnapshot.getChildren()) {
+                for (DataSnapshot x : dataSnapshot.getChildren()) {
                     Car car = x.getValue(Car.class);
                     cars.add(car);
                 }
-
-                adapter = new CarAdapter(cars, getActivity());
-                listView.setAdapter(adapter);
-
-                listView.setOnItemClickListener(
-                        new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                Toast.makeText(getContext(),"Clicked",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                );
+                recyclerView.setAdapter(new CarAdapter(cars, getActivity()));
             }
 
             @Override
